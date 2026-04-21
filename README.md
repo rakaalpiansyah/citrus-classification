@@ -5,7 +5,7 @@
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.4+-orange.svg)
 ![Status](https://img.shields.io/badge/Status-Completed-success.svg)
 
-Proyek ini adalah implementasi *Machine Learning* terintegrasi dengan antarmuka web modern (Dashboard) untuk mengklasifikasikan jenis buah sitrus (Jeruk atau Grapefruit) berdasarkan karakteristik fisiknya. Proyek ini dikembangkan untuk memenuhi evaluasi Ujian Tengah Semester dengan membandingkan tiga algoritma klasifikasi utama.
+Proyek ini adalah implementasi _Machine Learning_ terintegrasi dengan antarmuka web modern (Dashboard) untuk mengklasifikasikan jenis buah sitrus (Jeruk atau Grapefruit) berdasarkan karakteristik fisiknya. Proyek ini dikembangkan untuk memenuhi evaluasi Ujian Tengah Semester dengan membandingkan tiga algoritma klasifikasi utama.
 
 Dataset bersumber dari: [Kaggle - Oranges vs Grapefruit](https://www.kaggle.com/datasets/joshmcadams/oranges-vs-grapefruit).
 
@@ -13,8 +13,8 @@ Dataset bersumber dari: [Kaggle - Oranges vs Grapefruit](https://www.kaggle.com/
 
 ## Fitur Utama
 
-- **Analitik Komparatif:** Mengevaluasi dan membandingkan performa tiga model ML secara *real-time*.
-- **Modern Web Dashboard:** Antarmuka interaktif yang dibangun menggunakan Streamlit dengan desain UI/UX bergaya *Enterprise Dashboard*.
+- **Analitik Komparatif:** Mengevaluasi dan membandingkan performa tiga model ML secara _real-time_.
+- **Modern Web Dashboard:** Antarmuka interaktif yang dibangun menggunakan Streamlit dengan desain UI/UX bergaya _Enterprise Dashboard_.
 - **Prediksi Interaktif:** Pengguna dapat memasukkan dimensi fisik (diameter, berat) dan nilai RGB buah untuk mendapatkan hasil prediksi secara langsung.
 - **Visualisasi Data:** Implementasi Plotly Express untuk merender grafik batang yang elegan dan responsif.
 
@@ -23,35 +23,45 @@ Dataset bersumber dari: [Kaggle - Oranges vs Grapefruit](https://www.kaggle.com/
 ## Cuplikan Aplikasi (Screenshots)
 
 ### 1. Panel Dasbor & Metrik Akurasi
+
 > Menampilkan komparasi akurasi dari ketiga model yang digunakan.
 
 ![Dasbor](assets/image1.png)
 
 ### 2. Studio Prediksi Interaktif
-> Menampilkan panel input pengguna dengan slider dan indikator warna *real-time*.
+
+> Menampilkan panel input pengguna dengan slider dan indikator warna _real-time_.
+
+#### Support Vector Machine
 
 ![Support Vector Machine](assets/image2.png)
+
+#### Naive Bayes
+
 ![Naive Bayes](assets/image3.png)
+
+#### Decision Tree
+
 ![Decision Tree](assets/image4.png)
 
 ---
 
 ## Arsitektur Pipeline Machine Learning
 
-Sistem ini dibangun melalui beberapa tahapan *pipeline* standar industri:
+Sistem ini dibangun melalui beberapa tahapan _pipeline_ standar industri:
 
 1. **Data Loading:** Memuat dataset tabular berisi 10.000 baris observasi yang mencakup fitur `diameter`, `weight`, `red`, `green`, dan `blue`. Target klasifikasinya adalah kolom `name`.
 2. **Data Preprocessing:**
    - **Label Encoding:** Mengubah kelas target string ('orange', 'grapefruit') menjadi representasi biner (0, 1).
-   - **Data Splitting:** Membagi dataset menjadi *Training Set* (80%) dan *Testing Set* (20%) menggunakan metode *stratified sampling*.
+   - **Data Splitting:** Membagi dataset menjadi _Training Set_ (80%) dan _Testing Set_ (20%) menggunakan metode _stratified sampling_.
    - **Feature Scaling:** Menerapkan `StandardScaler` untuk menstandardisasi distribusi fitur, yang sangat krusial untuk performa algoritma berbasis jarak seperti SVM.
 3. **Model Training & Comparison:**
    Melatih dan membandingkan tiga algoritma klasifikasi:
-   - **Decision Tree Classifier:** Pemisahan berbasis *information gain*.
+   - **Decision Tree Classifier:** Pemisahan berbasis _information gain_.
    - **Naive Bayes (Gaussian):** Pendekatan probabilitas probabilistik bersyarat.
-   - **Support Vector Machine (SVM):** Pendekatan optimasi *hyperplane* dengan *linear kernel*.
+   - **Support Vector Machine (SVM):** Pendekatan optimasi _hyperplane_ dengan _linear kernel_.
 4. **Evaluation:**
-   Mengekstraksi *Accuracy Score* dan *Classification Report* untuk mengukur metrik keberhasilan masing-masing model pada data uji yang belum pernah dilihat sebelumnya.
+   Mengekstraksi _Accuracy Score_ dan _Classification Report_ untuk mengukur metrik keberhasilan masing-masing model pada data uji yang belum pernah dilihat sebelumnya.
 
 ---
 
@@ -76,19 +86,23 @@ citrus-classification/
 Ikuti langkah-langkah berikut untuk menjalankan proyek ini di mesin lokal Anda:
 
 ### 1. Prasyarat Sistem
+
 Pastikan Anda telah menginstal **Python 3.10** atau yang lebih baru.
 
 ### 2. Clone Repository
+
 ```bash
 git clone https://github.com/rakaalpiansyah/citrus-classification.git
 cd citrus-classification
 ```
 
 ### 3. Persiapkan Dataset
+
 Unduh dataset dari tautan Kaggle di atas, lalu letakkan file `citrus.csv` di dalam direktori `data/`.
 
 ### 4. Instalasi Dependensi
-Sangat disarankan menggunakan *Virtual Environment* (venv).
+
+Sangat disarankan menggunakan _Virtual Environment_ (venv).
 
 ```bash
 # Membuat environment (opsional)
@@ -105,9 +119,11 @@ pip install -r requirements.txt
 ```
 
 ### 5. Jalankan Aplikasi
+
 Jalankan server Streamlit menggunakan perintah berikut:
 
 ```bash
 streamlit run app.py
 ```
-Aplikasi akan secara otomatis terbuka di *browser default* Anda pada alamat `http://localhost:8501`.
+
+Aplikasi akan secara otomatis terbuka di _browser default_ Anda pada alamat `http://localhost:8501`.
