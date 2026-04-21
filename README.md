@@ -11,7 +11,7 @@ Dataset bersumber dari: [Kaggle - Oranges vs Grapefruit](https://www.kaggle.com/
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 
 - **Analitik Komparatif:** Mengevaluasi dan membandingkan performa tiga model ML secara *real-time*.
 - **Modern Web Dashboard:** Antarmuka interaktif yang dibangun menggunakan Streamlit dengan desain UI/UX bergaya *Enterprise Dashboard*.
@@ -20,7 +20,7 @@ Dataset bersumber dari: [Kaggle - Oranges vs Grapefruit](https://www.kaggle.com/
 
 ---
 
-## 📸 Cuplikan Aplikasi (Screenshots)
+## Cuplikan Aplikasi (Screenshots)
 
 ### 1. Panel Dasbor & Metrik Akurasi
 > Menampilkan komparasi akurasi dari ketiga model yang digunakan.
@@ -36,7 +36,7 @@ Dataset bersumber dari: [Kaggle - Oranges vs Grapefruit](https://www.kaggle.com/
 
 ---
 
-## 🧠 Arsitektur Pipeline Machine Learning
+## Arsitektur Pipeline Machine Learning
 
 Sistem ini dibangun melalui beberapa tahapan *pipeline* standar industri:
 
@@ -55,7 +55,7 @@ Sistem ini dibangun melalui beberapa tahapan *pipeline* standar industri:
 
 ---
 
-## 🗂️ Struktur Direktori
+## Struktur Direktori
 
 ```text
 citrus-classification/
@@ -71,7 +71,7 @@ citrus-classification/
 
 ---
 
-## 🚀 Panduan Instalasi dan Penggunaan
+## Panduan Instalasi dan Penggunaan
 
 Ikuti langkah-langkah berikut untuk menjalankan proyek ini di mesin lokal Anda:
 
@@ -80,7 +80,7 @@ Pastikan Anda telah menginstal **Python 3.10** atau yang lebih baru.
 
 ### 2. Clone Repository
 ```bash
-git clone [https://github.com/username-github-anda/citrus-classification.git](https://github.com/username-github-anda/citrus-classification.git)
+git clone https://github.com/rakaalpiansyah/citrus-classification.git
 cd citrus-classification
 ```
 
